@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/sh
 # determine prod or dev stage
 
 if [ -z "$DEBUG" ]; then
@@ -6,8 +6,8 @@ if [ -z "$DEBUG" ]; then
     exit 1
 fi
 
-if [ "$DEBUG"=1 ]; then
-    npm run serve
+if [ "$DEBUG" = 1 ]; then
+    npm run-script serve
 else
-    npm run build && npx serve -d dist
+    npm run-script build && npx serve -d dist
 fi
