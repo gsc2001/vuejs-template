@@ -9,5 +9,9 @@ fi
 if [ "$DEBUG" = 1 ]; then
     npm run-script serve
 else
-    npm run-script build && npx serve -d dist
+    export NODE_ENV=development
+    npm install --save-dev
+    npm run-script build
+    export NODE_ENV=production
+    npx serve -d dist -l 8080
 fi
