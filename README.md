@@ -1,6 +1,20 @@
 # vuejs-template
 
-## Project setup
+## Dockerized version
+
+### Building
+
+```
+docker build . -t vuejs:latest
+```
+
+### Running
+
+```
+docker run vuejs:latest
+```
+
+## Non-docker version
 
 ```
 npm install
