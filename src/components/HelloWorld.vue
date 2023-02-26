@@ -3,7 +3,7 @@
         <v-row class="text-center">
             <v-col cols="12">
                 <v-img
-                    :src="require('../assets/logo.svg')"
+                    :src="logoSvg"
                     class="my-3"
                     contain
                     height="200"
@@ -81,8 +81,10 @@
     </v-container>
 </template>
 
-<script>
-export default {
+<script setup>
+import logoSvg from '@/assets/logo.svg';
+import { defineComponent } from 'vue';
+defineComponent({
     name: 'HelloWorld',
 
     data: () => ({
@@ -138,5 +140,5 @@ export default {
             },
         ],
     }),
-};
+});
 </script>
